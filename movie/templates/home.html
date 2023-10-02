@@ -14,11 +14,27 @@
     <form action="">
   <div class="mb-3">
     <label for="searchInput" class="form-label">Search for Movie</label>
-    <input type="text" class="form-control" name="searchMovie" id="searchInput" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">Type search request.</div>
+    <input type="text" class="form-control" name="searchMovie" id="searchInput" aria-describedby="searchHelp">
+    <div id="searchHelp" class="form-text">Type search request.</div>
   </div>
   <button type="submit" class="btn btn-primary">Search</button>
 </form>
+    Searching for {{ searchTerm }}
+<br />
+<br />
+    <h2>Join our mailing list:</h2>
+<form action="{% url 'signup' %} ">
+    <div class="mb-3">
+        <label for="email" class="form-label">
+            Enter your email:
+        </label>
+        <input type="email" class="form-control" name="email" >
+    </div>
+    <button type="submit" class="btn btn-primary" >
+        SignUp
+    </button>
+</form>
+
 </div>
 </body>
 </html>
