@@ -5,8 +5,8 @@ from django.http import HttpResponse
 # Create your views here.
 
 def home(request):
-    searchTerm = request.GET.get('searchMovie')
-    return render(request, 'home.html', {'searchTerm': searchTerm})
+    search_term = request.GET.get('searchMovie')
+    return render(request, 'home.html', {'searchTerm': search_term})
 
 
 def about(request):
