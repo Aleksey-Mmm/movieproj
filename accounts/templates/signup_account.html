@@ -5,6 +5,11 @@
             <div>
                 <div class="card-body">
                     <h5 class="card-title">Регистрация</h5>
+                    {% if error_message %}
+                    <div class="alert alert-danger mt-3" role="alert">
+                    {{ error_message }}
+                    </div>
+                    {% endif %}
                     <div class="card-text">
                         <form method="post">
                     {% csrf_token %}
