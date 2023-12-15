@@ -9,11 +9,14 @@
             integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
             crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% load static %}
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
      <div class="container">
-         <a class="navbar-brand" href="{% url 'home' %}">Movies</a>
+         <a class="navbar-brand" href="{% url 'home' %}">
+             <img src="{% static 'images/movie.png' %}" alt=""
+                  width="30" height="30" class="d-inline-block align-text-top" />Movies</a>
          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                  data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
                  aria-expanded="false" aria-label="Toggle navigation">
