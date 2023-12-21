@@ -1,4 +1,4 @@
-from django.contrib.auth import login
+from django.contrib.auth import login, logout
 # from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.db import IntegrityError
@@ -24,3 +24,8 @@ def signup_account(request):
         else:
             return render(request, 'signup_account.html', {'form': CreateForm,
                                                            'error_message': 'Passwords do not match!'})
+
+
+def logout_account(request):
+    logout(request)
+    return redirect('home')
