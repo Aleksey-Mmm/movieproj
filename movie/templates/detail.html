@@ -15,6 +15,11 @@
                     Movie Link
                     </a>
                     {% endif %}
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'create_review' movie.id %}" class="btn btn-primary">
+                        Add Review
+                        </a>
+                    {% endif %}
                 </p>
                 <p class="card-text"><small class="text-muted">Release Date: {{ movie.release_date }}</small></p>
             </div>
